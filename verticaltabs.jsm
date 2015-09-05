@@ -178,7 +178,11 @@ VerticalTabs.prototype = {
 
         this.window.addEventListener("resize", this, false);
 
+        this.window.addEventListener("sizemodechange", this, true);
+
         this.unloaders.push(function () {
+            this.window.removeEventListener("sizemodechange", this, true);
+
             // Move the bottom back to being the next sibling of contentbox.
             browserbox.insertBefore(bottom, contentbox.nextSibling);
 
@@ -252,6 +256,19 @@ VerticalTabs.prototype = {
         aTab.maxWidth = 65000;
         aTab.minWidth = 0;
     },
+    
+    onSizeModeChange: function(aEvent) {
+        let box     = this.document.getElementById("verticaltabs-box");
+        let splitter = this.document.getElementById("verticaltabs-splitter");
+        if(this.window.windowState == 4
+        && Services.prefs.getBoolPref("extensions.verticaltabs.fullscreen")) {
+            box.style.display      = 'none';
+            splitter.style.display = 'none';
+        } else {
+            box.style.display      = '';
+            splitter.style.display = '';
+        }
+    },
 
     setPinnedSizes: function() {
         let tabs = this.document.getElementById("tabbrowser-tabs");
@@ -323,6 +340,10 @@ VerticalTabs.prototype = {
             return;
         case "resize":
             this.setPinnedSizes();
+            return;
+
+       case "sizemodechange":
+            this.onSizeModeChange(aEvent);
             return;
         }
     },
