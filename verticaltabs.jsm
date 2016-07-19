@@ -161,9 +161,6 @@ VerticalTabs.prototype = {
         let menu_tabsOnTop = document.getElementById("menu_tabsOnTop");
         menu_tabsOnTop.collapsed = true;
         menu_tabsOnTop.nextSibling.collapsed = true; // separator
-        let toolbar_context_menu = document.getElementById("toolbar-context-menu");
-        toolbar_context_menu.firstChild.collapsed = true;
-        toolbar_context_menu.firstChild.nextSibling.collapsed = true; // separator
         let appmenu_tabsOnTop = document.getElementById("appmenu_toggleTabsOnTop");
         if (appmenu_tabsOnTop) {
             appmenu_tabsOnTop.collapsed = true;
@@ -205,8 +202,6 @@ VerticalTabs.prototype = {
                 "extensions.verticaltabs.tabsOnTop");
             menu_tabsOnTop.collapsed = false;
             menu_tabsOnTop.nextSibling.collapsed = false; // separator
-            toolbar_context_menu.firstChild.collapsed = false;
-            toolbar_context_menu.firstChild.nextSibling.collapsed = false; // separator
             if (appmenu_tabsOnTop) {
                 appmenu_tabsOnTop.collapsed = false;
             }
