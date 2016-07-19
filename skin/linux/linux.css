@@ -134,6 +134,7 @@
     margin-right: 0px !important;
     margin-left: 0px !important;
     box-shadow: 8px 3px 0 rgba(0,0,0,.18) !important; /* would otherwise display a transparent pixel on the tooltip's corner */
+    color: InfoText !important;
 }
 
 .statuspanel-inner {
