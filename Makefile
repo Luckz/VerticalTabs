@@ -17,10 +17,10 @@ SOURCES = \
 	skin/osx/dropmarker.png \
 	skin/osx/osx.css \
 	skin/osx/twisty.png \
-	skin/win7/dropmarker.png \
-	skin/win7/twisty-collapsed.png \
-	skin/win7/twisty.png \
-	skin/win7/win7.css \
+	skin/win/dropmarker.png \
+	skin/win/twisty-collapsed.png \
+	skin/win/twisty.png \
+	skin/win/win.css \
 	tabdatastore.jsm \
 	utils.js \
 	vertical-tabbrowser.xml \

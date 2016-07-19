@@ -1,0 +1,331 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+#verticaltabs-splitter {
+   border-left: 1px solid #fcfcfc !important;
+   border-right: 1px solid #fcfcfc !important;
+   background-color: #d6e5f5 !important;
+   }
+}
+#verticaltabs-splitter {
+    min-width: 3px !important;
+    width: 3px !important;
+    margin: 0 0 24px 0 !important;
+    -moz-border-top-colors: none !important;
+    -moz-border-left-colors: none !important;
+    -moz-border-right-colors: none !important;
+    -moz-border-bottom-colors: none !important;
+}
+@media not all and (-moz-os-version: windows-vista) {
+@media not all and (-moz-os-version: windows-win7) {
+    #verticaltabs-splitter {
+    border-left: 1px solid #ffffff !important;
+    border-right: 1px solid #ffffff !important;
+    background-color: #f7f7f7 !important;
+    }
+}
+}
+
+#main-window[sizemode=normal] #verticaltabs-splitter {
+    margin: 0 0 24px 0 !important;
+}
+
+.tabbrowser-tabs {
+    background: transparent !important;
+    margin: 0 !important;
+}
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+.tabbrowser-tabs {
+    background-color: #fcfcfc !important;
+    }
+}
+@media not all and (-moz-os-version: windows-vista) {
+@media not all and (-moz-os-version: windows-win7) {
+.tabbrowser-tabs {
+    background-color: #ffffff !important;
+    }
+}
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+.tabbrowser-tab {
+    border: 2px solid transparent !important;
+    border-radius: 2.67px 0 0 2.67px;
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    }
+}
+.tabbrowser-tab {
+    -moz-box-pack: start;
+    -moz-box-flex: 0;
+    -moz-appearance: none ! important;
+    background: transparent ! important;
+    margin: 0;
+    padding: 1px 2px 2px 0px;
+    /* XXX this height isn't correct, especially on higher dpi settings. */
+    /* but we can force it with a font-size, so it'll be correct */
+    font-size: 12px ! important;
+}
+@media not all and (-moz-os-version: windows-vista) {
+@media not all and (-moz-os-version: windows-win7) {
+.tabbrowser-tab {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+    }
+}
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+.tabbrowser-tab:hover,
+.tabbrowser-tab:hover[selected="true"]:-moz-window-inactive {
+    border: 2px solid !important;
+    -moz-border-top-colors: #b8d6fb #fcfdfe !important;
+    -moz-border-bottom-colors: #b8d6fb #f2f7fe !important;
+    -moz-border-left-colors: #b8d6fb #f9fcfe !important;
+    -moz-border-right-colors: #b8d6fb #f9fcfe !important;
+    background: -moz-linear-gradient(top, #fafbfd, #ebf3fd) repeat-x !important;
+    }
+}
+@media not all and (-moz-os-version: windows-vista) {
+@media not all and (-moz-os-version: windows-win7) {
+.tabbrowser-tab:hover,
+.tabbrowser-tab:hover[selected="true"]:-moz-window-inactive {
+    border-color: #70C0E7 !important;
+    background: #E5F3FB !important;
+    }
+}
+}
+
+/*** Have not looked at pinned tabs yet ***/
+.tabbrowser-tab[pinned] {
+    position: inherit;
+    background: -moz-linear-gradient(left, gray, #ebf3fd) repeat-y !important;
+}
+
+@media (-moz-os-version: windows-vista),
+       (-moz-os-version: windows-win7) {
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab[multiselect="true"] {
+    border: 2px solid !important;
+    -moz-border-top-colors: #84acdd #f1f7fe !important;
+    -moz-border-bottom-colors: #84acdd #deedfe !important;
+    -moz-border-left-colors: #84acdd #e8f2fe !important;
+    -moz-border-right-colors: #84acdd #e8f2fe !important;
+    background: -moz-linear-gradient(top, #ebf4fe, #cfe4fe) repeat-x !important;
+    }
+.tabbrowser-tab[selected="true"]:-moz-window-inactive,
+.tabbrowser-tab[multiselect="true"]:-moz-window-inactive {
+    border: 2px solid !important;
+    -moz-border-top-colors: #d9d9d9 #fafafb !important;
+    -moz-border-bottom-colors: #d9d9d9 #f0f0f0 !important;
+    -moz-border-left-colors: #d9d9d9 #f8f8f8 !important;
+    -moz-border-right-colors: #d9d9d9 #f8f8f8 !important;
+    background: -moz-linear-gradient(top, #f8f8f8, #e5e5e5) repeat-x !important;
+    }
+}
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab[multiselect="true"] {
+    font-weight: normal;
+    text-shadow: none;
+}
+@media not all and (-moz-os-version: windows-vista) {
+@media not all and (-moz-os-version: windows-win7) {
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab[multiselect="true"] {
+    border-color: #66A7E8 !important;
+    background: #D1E8FF !important;
+    font-weight: normal;
+    text-shadow: none;
+    }
+.tabbrowser-tab[selected="true"]:-moz-window-inactive,
+.tabbrowser-tab[multiselect="true"]:-moz-window-inactive {
+    border: 1px solid !important;
+    border-color: #DEDEDE !important;
+    background: #F7F7F7 !important;
+    }
+}
+}
+.tabbrowser-tab:-moz-lwtheme {
+    color: black;
+    text-shadow: none;
+}
+
+/* Turn mouse cursor into a pointy hand.  This seems to be the
+   standard for link lists like these. */
+.tabbrowser-tab,
+.tab-text {
+    cursor: pointer !important;
+}
+
+.tabbrowser-tab:not(:hover):not([selected="true"]) .tab-close-button {
+    visibility: collapse !important;
+}
+
+
+.tab-icon-image,
+.tab-throbber {
+    margin: 0px 4px 1px -5px !important;
+}
+
+/* Keep the close button at a safe distance from the tab label. */
+.tab-close-button {
+    display: -moz-box;
+    margin-left: 0px;
+}
+
+/*** Tab toolbar styling ***/
+
+#TabsToolbar:not(:-moz-lwtheme)  {
+    height: 24px;
+    margin: 0 -3px 0px 0px !important;
+    -moz-appearance: none !important;
+    border-top: 1px solid #D7D7D7 !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    background-color: #F0F0F0 !important;
+}
+
+#verticaltabs-groupbutton {
+    /* TODO need icon to symbolize tab group */
+    list-style-image: url("chrome://browser/skin/Toolbar.png");
+    -moz-image-region: rect(0, 234px, 18px, 216px);
+}
+
+/*** private browsing indicator fix ***/
+#main-window[sizemode=normal] #TabsToolbar > .private-browsing-indicator,
+#main-window[sizemode=fullscreen] #TabsToolbar > .private-browsing-indicator {
+    background: url("chrome://browser/skin/privatebrowsing-mask-tabstrip.png") no-repeat center -7px;
+}
+
+/* Ensure that content area has a top border */
+#navigator-toolbox::after {
+    visibility: visible !important;
+}
+
+/*** remove all unnecessary borders, win10 style ***/
+
+#main-window[sizemode=normal] #browser-bottombox {
+    border-bottom: none !important;
+}
+
+#main-window[sizemode=normal] #browser-border-start,
+#main-window[sizemode=normal] #browser-border-end {
+    display: none !important;
+}
+
+#main-window {
+    -moz-appearance: -moz-win-glass !important;
+}
+
+#appcontent {
+    -moz-appearance: -moz-win-exclude-glass !important;
+}
+
+#main-window[sizemode=normal] #navigator-toolbox:after,
+#main-window[sizemode=normal] #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/*** Group related styles ***/
+
+.tabbrowser-tab[verticaltabs-ingroup],
+.tabbrowser-tab[verticaltabs-ingroup]:hover {
+    padding-left: 16px !important;
+}
+
+.tabbrowser-tab[verticaltabs-group] {
+}
+
+.tabbrowser-tab[verticaltabs-group] .tab-close-button {
+    opacity: 1 !important;
+}
+
+.tabbrowser-tab[verticaltabs-group] .tab-text {
+}
+
+.verticaltabs-textbox {
+    margin: 0;
+}
+
+.verticaltabs-counter {
+    visibility: collapse;
+}
+
+.verticaltabs-droptarget {
+    border: 2px solid !important;
+    -moz-border-top-colors: #84acdd #f1f7fe !important;
+    -moz-border-bottom-colors: #84acdd #deedfe !important;
+    -moz-border-left-colors: #84acdd #e8f2fe !important;
+    -moz-border-right-colors: #84acdd #e8f2fe !important;
+    background: -moz-linear-gradient(top, #ebf4fe, #cfe4fe) repeat-x !important;
+}
+
+.verticaltabs-dropingroup {
+    margin-left: 10px !important;
+}
+
+.verticaltabs-droptonewgroup {
+    /* TODO need icon to symbolize tab group */
+    list-style-image: url("chrome://browser/skin/Toolbar.png");
+    -moz-image-region: rect(0, 234px, 18px, 216px);
+}
+
+.verticaltabs-twisty {
+    cursor: default !important;
+    margin-left: 1px !important;
+    margin-right: 2px !important;
+    list-style-image: url("resource://verticaltabs/skin/win/twisty.png");
+}
+.tabbrowser-tab[verticaltabs-collapsed="true"] .verticaltabs-twisty {
+    list-style-image: url("resource://verticaltabs/skin/win/twisty-collapsed.png");
+}
+
+
+/*** Link display ***/
+
+.statuspanel-label {
+    -moz-appearance: tooltip !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 0px !important;
+}
+
+.statuspanel-inner {
+    height: 20px !important;
+}
+
+#main-window[sizemode="normal"]:not([inFullscreen="true"]) .statuspanel-inner {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+statuspanel[mirror]:-moz-locale-dir(ltr),
+statuspanel[mirror]:-moz-locale-dir(rtl) {
+    padding: 0px 5px 0px 0px !important;
+}
+
+statuspanel:-moz-locale-dir(ltr):not([mirror]),
+statuspanel:-moz-locale-dir(rtl):not([mirror]) {
+    padding: 0px 0px 0px 5px !important;
+}
+
+statuspanel[mirror]:-moz-locale-dir(ltr) .statuspanel-inner,
+statuspanel[mirror]:-moz-locale-dir(rtl) .statuspanel-inner,
+statuspanel:-moz-locale-dir(ltr):not([mirror]) .statuspanel-inner,
+statuspanel:-moz-locale-dir(rtl):not([mirror]) .statuspanel-inner {
+    margin-top: 11px !important;
+    margin-bottom: 5px !important;
+    box-shadow: 5px 5px 0px -4px rgba(0, 0, 0, 0.16), 5px 5px 0px -3px rgba(0, 0, 0, 0.20), 5px 5px 0px -2px rgba(0, 0, 0, 0.12), 5px 5px 0px -1px rgba(0, 0, 0, 0.04), 5px 5px 0px 0px rgba(0, 0, 0, 0.01) !important;
+    padding: 0px 0px !important;
+    border-radius: 0px !important;
+}
